@@ -1,0 +1,148 @@
+@blue: #3190e8;  
+@bc: #e4e4e4;
+@fc:#fff;
+
+// 背景图片地址和大小
+.bis(@url) { 
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+//定位全屏
+.allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//transform上下左右居中
+.ctt {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//定位上下左右居中
+.ctp(@width, @height) {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -@height/2;
+    margin-left: -@width/2;
+}
+
+//定位上下居中
+.tb {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+.lr {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+.wh(@width, @height){
+	width: @width;
+	height: @height;
+}
+
+//字体大小、行高、字体
+.ft(@size, @line-height) {  
+	font-size: @size;
+	line-height:@line-height;
+}
+
+//字体大小，颜色
+.sc(@size, @color){
+	font-size: @size;
+	color: @color;
+}
+
+//flex 布局和 子元素 对其方式
+.fj(@type: space-between){
+	display: flex;
+	justify-content: @type;
+
+}
+
+//信息框样式
+.infoblock {
+	padding: 15px;
+	background-color: #fff;
+  }
+
+//间隔样式
+.title {
+	padding: 15px 0;
+	font-weight: bold;
+}
+
+//title1样式
+.title1 {
+	font-weight: bold;
+}
+
+//title2样式
+.title2 {
+	padding: 15px 0 7px 0;
+	font-size: 14px;
+}
+
+//title3样式
+.title3 {
+	font-size: 12px;
+}
+
+//title4样式
+.title4 {
+	font-size: 14px;
+}
+
+//money样式
+.money {
+	font-size: 35px;
+}
+
+//opacity样式
+.opacity45 {
+	opacity: 0.45;
+}
+
+//padding-left样式
+.padding_left {
+	padding-left: 15px;
+}
+
+//paddingtb样式
+.paddingtb {
+	padding: 15px 0;
+}
+
+//purple样式
+.purple {
+	color: #A380FF;
+}
+.purpleButton {
+	background: #006FFF;
+	color: #fff;
+}
+
+.el-checkbox-button.is-checked .el-checkbox-button__inner {
+	color: #FFF;
+    background-color: #006FFF;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+    border-color: #006FFF;
+    background: #006FFF;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+    color: #006FFF;
+}
