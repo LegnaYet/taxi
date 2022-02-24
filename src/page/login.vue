@@ -61,37 +61,26 @@ export default {
   methods: {
 
     loginPost() {
-        this.$router.push("/home");
-        // this.passwordLoginPost();
+        this.passwordLoginPost();
     },
     async passwordLoginPost() {
       console.log("点击登录");
-      if (this.identifyCode != this.loginForm.code) {
-        this.$message({
-          type: "error",
-          message: "验证码不正确",
-          offset: 100,
-        });
-        return;
-      }
       const res = await login({
         userName: this.loginForm.username,
         password: this.loginForm.password,
       });
-      console.log(res);
       if (res.code == 200) {
         this.$message({
           type: "success",
           message: "登录成功",
           offset: 100,
         });
-        localStorage.setItem("token", res.result);
-        this.getUserInfo();
-          this.$router.push("/index");
+        localStorage.setItem("user", res.result);
+        this.$router.push("/home");
       } else {
         this.$message({
           type: "error",
-          message: res.msg,
+          message: res.message,
           offset: 100,
         });
       }

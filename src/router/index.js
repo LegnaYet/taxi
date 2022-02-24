@@ -8,6 +8,10 @@ const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
 
 const routes = [
     {
+        path: '/',
+        component: login,
+    },
+    {
         path: '/login',
         component: login,
     },

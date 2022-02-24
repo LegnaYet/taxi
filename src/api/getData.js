@@ -8,4 +8,4 @@ export const signout = () => fetch('/admin/signout');
 /**
  * 登录
  */
-export const login = data => fetch('/system/user/login/password', data, 'POST');
+export const login = data => fetch('/login/login', data, 'POST');

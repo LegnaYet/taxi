@@ -11,9 +11,7 @@ let routerMode = 'hash';
 let baseImgPath;
 
 if (process.env.NODE_ENV == 'development') {
-    baseUrl = 'http://192.168.1.203:8080/cat-code'; //金超凡的ip
-    // baseUrl = 'http://192.168.1.111:8080/cat-code'; //戴若琦的ip
-    // baseUrl = 'http://api.maoma.cc'
+    baseUrl = 'http://localhost:28080/taxi-app';
     baseImgPath = '/img/';
 } else {
     baseUrl = 'https://api.maoma.cc'
