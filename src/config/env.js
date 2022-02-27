@@ -12,10 +12,10 @@ let baseImgPath;
 
 if (process.env.NODE_ENV == 'development') {
     baseUrl = 'http://localhost:28080/taxi-app';
-    baseImgPath = '/img/';
+    baseImgPath = 'http://47.100.200.255:18880/test';
 } else {
     baseUrl = 'https://api.maoma.cc'
-    baseImgPath = '/img/';
+    baseImgPath = 'http://47.100.200.255:18880/test';
 }
 
 export {
